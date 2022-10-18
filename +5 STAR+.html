@@ -54,6 +54,37 @@
       padding: 30px;
     }
 
+    .container {
+  position: relative;
+    }
+    .image {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+    }
+    .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+    }
+    .container:hover .image {
+  opacity: 0.3;
+    }
+    .container:hover .middle {
+  opacity: 1;
+    }
+    .text {
+  color: white;
+  font-family: gmarket;
+  font-size: 23px;
+    }
+
     @font-face {
       font-family: gmarket;
       src: url(GmarketSansTTFLight.ttf);
@@ -63,6 +94,10 @@
       font-family: gmarket;
       line-height: 150%;
       color: white
+    }
+
+    //pre:hover {
+      background-color: slateblue;
     }
 
   </style>
@@ -89,7 +124,16 @@
   </div>
 
   <div class="column">
-  <img width="500px" height="500px" src="+5 STAR+.jpeg">
+    <div class="container">
+    <img width="500px" height="500px" src="+5 STAR+.jpeg" class="image">
+      <div class="middle">
+        <div class="text">
+Released: 2021<br>
+Album: Alpha<br>
+Artist: CL
+        </div>
+      </div>
+    </div>
   <br><br><br><br>
   <audio src="+5 STAR+.mp3" controls> </audio>
   </div>

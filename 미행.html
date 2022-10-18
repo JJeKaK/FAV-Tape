@@ -65,6 +65,37 @@
       color: white;
     }
 
+    .container {
+  position: relative;
+    }
+    .image {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+    }
+    .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+    }
+    .container:hover .image {
+  opacity: 0.3;
+    }
+    .container:hover .middle {
+  opacity: 1;
+    }
+    .text {
+  color: white;
+  font-family: gmarket;
+  font-size: 23px;
+    }
+
   </style>
 </head>
 
@@ -89,7 +120,16 @@
   </div>
 
   <div class="column">
-  <img width="500px" height="500px" src="미행.jpeg">
+    <div class="container">
+  <img width="500px" height="500px" src="미행.jpeg" class="image">
+  <div class="middle">
+    <div class="text">
+Released: 2013<br>
+Album: Pink Tape<br>
+Artist: f(x)
+    </div>
+    </div>
+    </div>
   <br><br><br><br>
   <audio src="미행.mp3" controls> </audio>
   </div>
